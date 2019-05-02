@@ -1,0 +1,17 @@
+{
+  // #每次保存的时候将代码按eslint格式进行修复
+  "eslint.autoFixOnSave": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    {
+      "language": "vue",
+      "autoFix": true
+    }
+  ],
+  // 重新设定tabsize
+  "editor.tabSize": 2,
+  "editor.formatOnSave": false,
+  "prettier.semi": false,
+  "prettier.singleQuote": true
+}
