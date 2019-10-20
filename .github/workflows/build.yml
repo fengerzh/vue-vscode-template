@@ -1,0 +1,17 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+    - name: dll
+      run: pnpm run dll
+    - name: build
+      run: |
+        pnpm run build
+        echo finished
