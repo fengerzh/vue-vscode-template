@@ -19,8 +19,6 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: install
       run: yarn
-    - name: dll
-      run: yarn dll
     - name: build
       run: |
         yarn build
