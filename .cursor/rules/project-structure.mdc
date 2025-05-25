@@ -1,0 +1,36 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# 项目结构说明
+
+本项目为 Vue 3 + Vite 模板，目录结构如下：
+
+- `src/`：主源码目录
+  - `main.js`：应用入口文件，挂载根组件 `App.vue`
+  - `App.vue`：主组件，引用了 `HelloWorld.vue` 组件和 logo 图片
+  - `components/HelloWorld.vue`：示例组件，展示 props、样式和常用链接
+  - `assets/logo.png`：项目 logo 图片
+- `index.html`：项目 HTML 入口，挂载点为 `#app`
+- `vite.config.js`：Vite 配置文件，配置了端口和自动打开浏览器
+- `package.json`：依赖与脚本管理，包含 `dev`、`build`、`serve`、`lint`、`test` 等常用命令
+- `.github/workflows/build.yml`：CI 配置，自动安装依赖并构建项目
+- `.gitignore`：Git 忽略文件配置
+- `.prettierrc.js`：Prettier 代码风格配置
+- `renovate.json`：Renovate 依赖自动升级配置
+- `README.md`：项目说明文档，包含安装、开发、编译、测试、Lint 等说明
+
+---
+
+## 关键文件引用格式示例
+
+- 入口文件：[src/main.js](mdc:src/main.js)
+- 主组件：[src/App.vue](mdc:src/App.vue)
+- 示例组件：[src/components/HelloWorld.vue](mdc:src/components/HelloWorld.vue)
+- Vite 配置：[vite.config.js](mdc:vite.config.js)
+- CI 配置：[.github/workflows/build.yml](mdc:.github/workflows/build.yml)
+
+---
+
+如需详细了解某个文件或目录，可参考上述引用格式。
