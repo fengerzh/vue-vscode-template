@@ -23,8 +23,8 @@ devDependencies:
     specifier: ^4.4.6
     version: 4.4.6(vue-template-compiler@2.6.11)
   '@vue/eslint-config-prettier':
-    specifier: ^6.0.0
-    version: 6.0.0(eslint-plugin-prettier@3.1.4)(eslint@7.3.1)(prettier@2.0.5)
+    specifier: ^10.0.0
+    version: 10.2.0(eslint@7.3.1)(prettier@2.0.5)
   babel-eslint:
     specifier: ^10.1.0
     version: 10.1.0(eslint@7.3.1)
@@ -1096,6 +1096,11 @@ packages:
     engines: {node: '>= 6'}
     dev: true
 
+  /@pkgr/core@0.2.4:
+    resolution: {integrity: sha512-ROFF39F6ZrnzSUEmQQZUar0Jt4xVoP9WnDRdWwF4NNcXs3xBTLgBUDoOwW141y1jP+S8nahIbdxbFC7IShw9Iw==}
+    engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
+    dev: true
+
   /@soda/friendly-errors-webpack-plugin@1.7.1(webpack@4.43.0):
     resolution: {integrity: sha512-cWKrGaFX+rfbMrAxVv56DzhPNqOJPZuNIS2HGMELtgGzb+vsMzyig9mml5gZ/hr2BGtSLV+dP2LUEuAL8aG2mQ==}
     peerDependencies:
@@ -1609,17 +1614,18 @@ packages:
       - whiskers
     dev: true
 
-  /@vue/eslint-config-prettier@6.0.0(eslint-plugin-prettier@3.1.4)(eslint@7.3.1)(prettier@2.0.5):
-    resolution: {integrity: sha512-wFQmv45c3ige5EA+ngijq40YpVcIkAy0Lihupnsnd1Dao5CBbPyfCzqtejFLZX1EwH/kCJdpz3t6s+5wd3+KxQ==}
+  /@vue/eslint-config-prettier@10.2.0(eslint@7.3.1)(prettier@2.0.5):
+    resolution: {integrity: sha512-GL3YBLwv/+b86yHcNNfPJxOTtVFJ4Mbc9UU3zR+KVoG7SwGTjPT+32fXamscNumElhcpXW3mT0DgzS9w32S7Bw==}
     peerDependencies:
-      eslint: '>= 5.0.0'
-      eslint-plugin-prettier: ^3.1.0
-      prettier: '>= 1.13.0'
+      eslint: '>= 8.21.0'
+      prettier: '>= 3.0.0'
     dependencies:
       eslint: 7.3.1
-      eslint-config-prettier: 6.11.0(eslint@7.3.1)
-      eslint-plugin-prettier: 3.1.4(eslint@7.3.1)(prettier@2.0.5)
+      eslint-config-prettier: 10.1.5(eslint@7.3.1)
+      eslint-plugin-prettier: 5.4.0(eslint-config-prettier@10.1.5)(eslint@7.3.1)(prettier@2.0.5)
       prettier: 2.0.5
+    transitivePeerDependencies:
+      - '@types/eslint'
     dev: true
 
   /@vue/preload-webpack-plugin@1.1.1(html-webpack-plugin@3.2.0)(webpack@4.43.0):
@@ -3820,14 +3826,13 @@ packages:
     engines: {node: '>=0.8.0'}
     dev: true
 
-  /eslint-config-prettier@6.11.0(eslint@7.3.1):
-    resolution: {integrity: sha512-oB8cpLWSAjOVFEJhhyMZh6NOEOtBVziaqdDQ86+qhDHFbZXoRTM7pNSvFRfW/W/L/LrQ38C99J5CGuRBBzBsdA==}
+  /eslint-config-prettier@10.1.5(eslint@7.3.1):
+    resolution: {integrity: sha512-zc1UmCpNltmVY34vuLRV61r1K27sWuX39E+uyUnY8xS2Bex88VV9cugG+UZbRSRGtGyFboj+D8JODyme1plMpw==}
     hasBin: true
     peerDependencies:
-      eslint: '>=3.14.1'
+      eslint: '>=7.0.0'
     dependencies:
       eslint: 7.3.1
-      get-stdin: 6.0.0
     dev: true
 
   /eslint-loader@2.2.1(eslint@7.3.1)(webpack@4.43.0):
@@ -3855,6 +3860,27 @@ packages:
       eslint: 7.3.1
       prettier: 2.0.5
       prettier-linter-helpers: 1.0.0
+    dev: true
+
+  /eslint-plugin-prettier@5.4.0(eslint-config-prettier@10.1.5)(eslint@7.3.1)(prettier@2.0.5):
+    resolution: {integrity: sha512-BvQOvUhkVQM1i63iMETK9Hjud9QhqBnbtT1Zc642p9ynzBuCe5pybkOnvqZIBypXmMlsGcnU4HZ8sCTPfpAexA==}
+    engines: {node: ^14.18.0 || >=16.0.0}
+    peerDependencies:
+      '@types/eslint': '>=8.0.0'
+      eslint: '>=8.0.0'
+      eslint-config-prettier: '>= 7.0.0 <10.0.0 || >=10.1.0'
+      prettier: '>=3.0.0'
+    peerDependenciesMeta:
+      '@types/eslint':
+        optional: true
+      eslint-config-prettier:
+        optional: true
+    dependencies:
+      eslint: 7.3.1
+      eslint-config-prettier: 10.1.5(eslint@7.3.1)
+      prettier: 2.0.5
+      prettier-linter-helpers: 1.0.0
+      synckit: 0.11.6
     dev: true
 
   /eslint-plugin-vue@6.2.2(eslint@7.3.1):
@@ -4481,11 +4507,6 @@ packages:
   /get-caller-file@2.0.5:
     resolution: {integrity: sha512-DyFP3BM/3YHTQOCUL/w0OZHR0lpKeGrxotcHWcqNEdnltqFwXVfhEBQ94eIo34AfQpo0rGki4cyIiftY06h2Fg==}
     engines: {node: 6.* || 8.* || >= 10.*}
-    dev: true
-
-  /get-stdin@6.0.0:
-    resolution: {integrity: sha512-jp4tHawyV7+fkkSKyvjuLZswblUtz+SQKzSWnBbii16BuZksJlU1wuBYXY75r+duh/llF1ur6oNwi+2ZzjKZ7g==}
-    engines: {node: '>=4'}
     dev: true
 
   /get-stream@3.0.0:
@@ -8051,6 +8072,13 @@ packages:
       stable: 0.1.8
       unquote: 1.1.1
       util.promisify: 1.0.1
+    dev: true
+
+  /synckit@0.11.6:
+    resolution: {integrity: sha512-2pR2ubZSV64f/vqm9eLPz/KOvR9Dm+Co/5ChLgeHl0yEDRc6h5hXHoxEQH8Y5Ljycozd3p1k5TTSVdzYGkPvLw==}
+    engines: {node: ^14.18.0 || >=16.0.0}
+    dependencies:
+      '@pkgr/core': 0.2.4
     dev: true
 
   /table@5.4.6:
