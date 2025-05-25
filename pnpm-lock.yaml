@@ -29,8 +29,8 @@ devDependencies:
     specifier: ^10.1.0
     version: 10.1.0(eslint@7.3.1)
   clean-webpack-plugin:
-    specifier: ^3.0.0
-    version: 3.0.0(webpack@4.43.0)
+    specifier: ^4.0.0
+    version: 4.0.0(webpack@4.43.0)
   eslint:
     specifier: ^7.3.1
     version: 7.3.1
@@ -1111,10 +1111,6 @@ packages:
     resolution: {integrity: sha512-T7VNNlYVM1SgQ+VsMYhnDkcGmWhQdL0bDyGm5TlQ3GBXnJscEClUUOKduWTmm2zCnvNLC1hc3JpuXjs/nFOc5w==}
     dev: true
 
-  /@types/anymatch@1.3.1:
-    resolution: {integrity: sha512-/+CRPXpBDpo2RK9C68N3b2cOvO0Cf5B9aPijHsoDQTHivnGSObdOF2BRQOYjojWTDy6nQvMjmqRXIxH55VjxxA==}
-    dev: true
-
   /@types/color-name@1.1.1:
     resolution: {integrity: sha512-rr+OQyAjxze7GgWrSaJwydHStIhHq2lvY3BOC2Mj7KnzI7XK0Uw1TOOdI9lDoajEbSWLiYgoo4f1R51erQfhPQ==}
     dev: true
@@ -1144,39 +1140,6 @@ packages:
 
   /@types/q@1.5.4:
     resolution: {integrity: sha512-1HcDas8SEj4z1Wc696tH56G8OlRaH/sqZOynNNB+HF0WOeXPaxTtbYzJY2oEfiUxjSKjhCKr+MvR7dCHcEelug==}
-    dev: true
-
-  /@types/source-list-map@0.1.2:
-    resolution: {integrity: sha512-K5K+yml8LTo9bWJI/rECfIPrGgxdpeNbj+d53lwN4QjW1MCwlkhUms+gtdzigTeUyBr09+u8BwOIY3MXvHdcsA==}
-    dev: true
-
-  /@types/tapable@1.0.6:
-    resolution: {integrity: sha512-W+bw9ds02rAQaMvaLYxAbJ6cvguW/iJXNT6lTssS1ps6QdrMKttqEAMEG/b5CR8TZl3/L7/lH0ZV5nNR1LXikA==}
-    dev: true
-
-  /@types/uglify-js@3.9.2:
-    resolution: {integrity: sha512-d6dIfpPbF+8B7WiCi2ELY7m0w1joD8cRW4ms88Emdb2w062NeEpbNCeWwVCgzLRpVG+5e74VFSg4rgJ2xXjEiQ==}
-    dependencies:
-      source-map: 0.6.1
-    dev: true
-
-  /@types/webpack-sources@1.4.0:
-    resolution: {integrity: sha512-c88dKrpSle9BtTqR6ifdaxu1Lvjsl3C5OsfvuUbUwdXymshv1TkufUAXBajCCUM/f/TmnkZC/Esb03MinzSiXQ==}
-    dependencies:
-      '@types/node': 14.0.14
-      '@types/source-list-map': 0.1.2
-      source-map: 0.7.3
-    dev: true
-
-  /@types/webpack@4.41.18:
-    resolution: {integrity: sha512-mQm2R8vV2BZE/qIDVYqmBVLfX73a8muwjs74SpjEyJWJxeXBbsI9L65Pcia9XfYLYWzD1c1V8m+L0p30y2N7MA==}
-    dependencies:
-      '@types/anymatch': 1.3.1
-      '@types/node': 14.0.14
-      '@types/tapable': 1.0.6
-      '@types/uglify-js': 3.9.2
-      '@types/webpack-sources': 1.4.0
-      source-map: 0.6.1
     dev: true
 
   /@vue/babel-helper-vue-jsx-merge-props@1.0.0:
@@ -2674,13 +2637,12 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  /clean-webpack-plugin@3.0.0(webpack@4.43.0):
-    resolution: {integrity: sha512-MciirUH5r+cYLGCOL5JX/ZLzOZbVr1ot3Fw+KcvbhUb6PM+yycqd9ZhIlcigQ5gl+XhppNmw3bEFuaaMNyLj3A==}
-    engines: {node: '>=8.9.0'}
+  /clean-webpack-plugin@4.0.0(webpack@4.43.0):
+    resolution: {integrity: sha512-WuWE1nyTNAyW5T7oNyys2EN0cfP2fdRxhxnIQWiAp0bMabPdHhoGxM8A6YL2GhqwgrPnnaemVE7nv5XJ2Fhh2w==}
+    engines: {node: '>=10.0.0'}
     peerDependencies:
-      webpack: '*'
+      webpack: '>=4.0.0 <6.0.0'
     dependencies:
-      '@types/webpack': 4.41.18
       del: 4.1.1
       webpack: 4.43.0
     dev: true
@@ -4561,7 +4523,7 @@ packages:
     dev: true
 
   /globby@6.1.0:
-    resolution: {integrity: sha1-9abXDoOV4hyFj7BInWTfAkJNUGw=}
+    resolution: {integrity: sha512-KVbFv2TQtbzCoxAnfD6JcHZTYCzyliEaaeM/gH8qQdkKr5s0OP9scEgvdcngyk7AVdY6YVW/TJHd+lQ/Df3Daw==}
     engines: {node: '>=0.10.0'}
     dependencies:
       array-union: 1.0.2
@@ -6455,7 +6417,7 @@ packages:
     dev: true
 
   /path-is-inside@1.0.2:
-    resolution: {integrity: sha1-NlQX3t5EQw0cEa9hAn+s8HS9/FM=}
+    resolution: {integrity: sha512-DUWJr3+ULp4zXmol/SZkFf3JGsS9/SIv+Y3Rt93/UjPpDpklB5f1er4O3POIbUuUJ3FXgqte2Q7SrU6zAqwk8w==}
     dev: true
 
   /path-key@2.0.1:
@@ -6510,7 +6472,7 @@ packages:
     optional: true
 
   /pify@2.3.0:
-    resolution: {integrity: sha1-7RQaasBDqEnqWISY59yosVMw6Qw=}
+    resolution: {integrity: sha512-udgsAY+fTnvv7kI7aaxbqwWNb0AHiB0qBO89PZKPkoTmGOgdbrHDKD+0B2X4uTfJ/FT1R09r9gTsjUjNJotuog==}
     engines: {node: '>=0.10.0'}
     dev: true
 
@@ -7741,11 +7703,6 @@ packages:
   /source-map@0.6.1:
     resolution: {integrity: sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==}
     engines: {node: '>=0.10.0'}
-    dev: true
-
-  /source-map@0.7.3:
-    resolution: {integrity: sha512-CkCj6giN3S+n9qrYiBTX5gystlENnRW5jZeNLHpe6aue+SrHcG5VYwujhW9s4dY31mEGsxBDrHR6oI69fTXsaQ==}
-    engines: {node: '>= 8'}
     dev: true
 
   /spdx-correct@3.1.1:
